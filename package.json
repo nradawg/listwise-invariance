@@ -1,0 +1,22 @@
+{
+  "name": "listwise-invariance",
+  "version": "0.1.0",
+  "description": "Listwise LLM reranking whose output does not depend on input order: order-invariant seeding, sliding windows checked for stranded positions, and oscillation detected instead of averaged over.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": { "build": "tsc", "prepack": "npm run build", "test": "vitest run" },
+  "keywords": ["llm", "rerank", "listwise", "rankgpt", "retrieval", "determinism"],
+  "author": "Nick Raddon",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/nradawg/listwise-invariance.git" },
+  "engines": { "node": ">=18" },
+  "devDependencies": { "typescript": "^5.5.0", "vitest": "^2.0.0" }
+}
